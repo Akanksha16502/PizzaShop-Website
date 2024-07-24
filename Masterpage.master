@@ -1,0 +1,115 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Masterpage.master.cs" Inherits="Masterpage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 101px;
+        }
+        .style2
+        {
+            width: 1211px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <table style="width: 100%; height: 33px;" 
+                bgcolor="Black">
+                <tr>
+                    <td align="left" class="style1">
+                        &nbsp;
+                        <asp:Image ID="Image1" runat="server"
+                        Height="79px" Width="98px" style=" margin-left: 0px; margin-bottom: 0px; margin-top: 0px" 
+                            ImageUrl="~/logo - Copy/l6.jpg" />
+                    </td>
+                    <td align="center" class="style2" 
+                        
+                        style="font-family:Arial Black; font-size: xx-large; color: #FFFFFF;">
+                        &nbsp;&nbsp; Pizza Shop</td>
+                    <td align="right">
+                        &nbsp;
+                        <asp:Image ID="Image2" runat="server" 
+                            Height="79px" Width="98px" style=" margin-left: 0px; margin-bottom: 0px; margin-top: 0px" 
+                            ImageUrl="~/logo - Copy/l6.jpg" />
+                    </td>
+                </tr>
+                
+            </table>
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+        
+            <asp:Menu ID="Menu1" runat="server" 
+                BackColor="#FFFBD6" DynamicHorizontalOffset="2" 
+                Font-Names="Verdana" Font-Size="0.8em" 
+                ForeColor="#990000" Orientation="Horizontal" 
+                RenderingMode="Table" StaticSubMenuIndent="10px" 
+                Width="100%">
+                <DynamicHoverStyle BackColor="#990000" 
+                    ForeColor="White" />
+                <DynamicMenuItemStyle HorizontalPadding="5px" 
+                    VerticalPadding="2px" />
+                <DynamicMenuStyle BackColor="#FFFBD6" />
+                <DynamicSelectedStyle BackColor="#FFCC66" />
+                <Items>
+                    <asp:MenuItem NavigateUrl="~/Home.aspx" 
+                        Text="HOME" Value="HOME"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/About us.aspx" 
+                        Text="ABOUT US" Value="ABOUT US">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Contact us.aspx" 
+                        Text="CONTACT" Value="CONTACT"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Chefs.aspx" 
+                        Text="CHEFS" Value="CHEFS"></asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Registration.aspx" 
+                        Text="REGISTRATION" Value="REGISTRATION">
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Feedback.aspx" 
+                        Text="FEEDBACK" Value="FEEDBACK">
+                    </asp:MenuItem>
+                    <asp:MenuItem Text="LOGIN" Value="LOGIN" 
+                        NavigateUrl="~/Userlogin.aspx">
+                        <asp:MenuItem Text="USER" Value="USER" 
+                            NavigateUrl="~/Userlogin.aspx">
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="ADMIN" Value="ADMIN" 
+                            NavigateUrl="~/Adminlogin.aspx">
+                        </asp:MenuItem>
+                    </asp:MenuItem>
+                    <asp:MenuItem NavigateUrl="~/Allproduct.aspx" 
+                        Text="PRODUCT" Value="PRODUCT"></asp:MenuItem>
+                </Items>
+                <StaticHoverStyle BackColor="#990000" 
+                    ForeColor="White" />
+                <StaticMenuItemStyle HorizontalPadding="5px" 
+                    VerticalPadding="2px" />
+                <StaticSelectedStyle BackColor="#FFCC66" />
+            </asp:Menu>
+        
+        </asp:ContentPlaceHolder>
+        <div style="background-image: url('/PizzaShop/bgimage - Copy/food.png');">
+        <asp:ContentPlaceHolder id="ContentPlaceHolder3" runat="server">
+        
+        </asp:ContentPlaceHolder></div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder4" runat="server">
+        <p align="center" 
+                style="font-size: large; font-weight: bold; color: #FFFFFF; background-color: #999999;">
+            <asp:HyperLink ID="HyperLink1" runat="server" 
+                BorderColor="#666699" BorderStyle="Solid" 
+                Width="219px" style="margin-bottom: 31px" 
+                BackColor="#CCCCCC" 
+                NavigateUrl="~/Adminlogin.aspx">adminlogin</asp:HyperLink></p>
+        </asp:ContentPlaceHolder>
+       
+    </div>
+    </form>
+</body>
+</html>
